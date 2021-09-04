@@ -26,7 +26,7 @@ urlpatterns = [
     path('todo/',todoView),
     path('add-item/',todoAddItem),
     path('delete-item/<int:itemID>/',todoDeleteItem),
-    path('undo-item/<int:itemID>/',todoUndoItem)
+    path('undo-item/<int:itemID>/',todoUndoItem),
 
     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
