@@ -63,6 +63,11 @@
         .column{
             padding : 0;
         }
+        .add-item form{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         .add-item input.is-rounded{
             width: 79%;
             border-top-right-radius: 0;
@@ -74,6 +79,18 @@
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             display : inline;
+        }
+
+        @media only screen and (max-device-width: 550px){
+            .form-card{
+                width : 100vw;
+                height : 100vh;
+                border-radius: unset;
+            }
+            .todo-items{
+                height : calc(100vh - 140px);
+                overflow-y: auto;
+            }
         }
     </style>
 </head>
