@@ -63,15 +63,17 @@
         .column{
             padding : 0;
         }
-        .column input.is-rounded{
-            width: 100%;
+        .add-item input.is-rounded{
+            width: 79%;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+            display : inline;
         }
-        .column button.is-rounded{
-            width: 100%;
+        .add-item button.is-rounded{
+            width: 19%;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+            display : inline;
         }
     </style>
 </head>
@@ -114,14 +116,10 @@
                 </div>
 
                 <div class="add-item">
-                    <form class="columns" action="/add-item/" method="POST">
+                    <form action="/add-item/" method="POST">
                         {% csrf_token %}
-                        <div class="column is-four-fifths">
-                            <input class="input is-rounded" type="text" name="inputItem" placeholder="Add items here">
-                        </div>
-                        <div class="column is-one-fifth">
-                            <button class="button is-primary is-rounded">Add</button>
-                        </div>
+                        <input class="input is-rounded" type="text" name="inputItem" placeholder="Add items here">
+                        <button class="button is-primary is-rounded">Add</button>
                     </form>
                 </div>
 
